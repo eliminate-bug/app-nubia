@@ -17,6 +17,12 @@ import MyHeader from '@/components/myHeader'
 export default {
   components: {
     MyHeader
+  },
+  created () {
+    this.$http.getHomeData()
+      .then(resp => {
+        console.log(resp)
+      })
   }
 }
 </script>
